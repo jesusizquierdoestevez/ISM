@@ -6,12 +6,12 @@ html {
 
 button {
   outline: none;
-  background: rgba(black, 0.8);
+  background: rgb(213, 221, 255);
   width: 100%;
   border: 0;
   border-radius: 4px;
   padding: 12px 20px;
-  color: rgb(125, 46, 252);
+  color: rgb(0, 0, 0);
   font-family: inherit;
   font-size: inherit;
   font-weight: semibold;
@@ -21,8 +21,8 @@ button {
 }
 
 body {
-  background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
-  color: gray;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: base-font-family;
   font-size: base-font-size;
   line-height: base-line-height;
@@ -55,28 +55,12 @@ body {
     label {
       display: block;
       margin: 0 0 10px;
-      color: rgb(0, 46, 252);
+      color: white;
       font-size: 12px;
       font-weight: semibold;
       line-height: 1;
       text-transform: uppercase;
       letter-spacing: .2em;
-    }
-
-    button {
-      outline: none;
-      background: accent;
-      width: 100%;
-      border: 0;
-      border-radius: 4px;
-      padding: 12px 20px;
-      color: rgb(0, 46, 252);
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: semibold;
-      line-height: inherit;
-      text-transform: uppercase;
-      cursor: pointer;
     }
 
 

@@ -1,22 +1,5 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8">
@@ -30,22 +13,25 @@
         <title>Welcome</title>
     </head>
     <body>
-            <h1>Bienvenido a nuestra aplicacion</h1>
-            <form action="html/NFCusuario.html" method="POST">
-                <h2>Login</h2>
-                <label>Mail</label>                
-                <input type="text" placeholder="mail" name="mail">
-                </br>
-                <label>Password</label>
-                <input type="password" placeholder="password" name="password">
-                </br>
-                </br>
-                </br>
-                <button type="submit">Iniciar Sesion</button>
-            </form>
+        <h1>Bienvenido a nuestra aplicacion</h1>
+        <form action="html/configurarLeer.html" method="POST">
+            <h2>Login</h2>
+            <label>Mail</label>                
+            <input type="text" placeholder="mail" name="mail">
+            </br>
+            </br>
+            <label>Password</label>
+            <input type="password" placeholder="password" name="password">
+            </br>
+            </br>
+            </br>
+            <button type="submit">Iniciar Sesion</button>
+        </form>
             
-        <h3>Si no estas registrado, hazlo </h3>
-            <a href="html/registro.html">aqui</a>
+        <h3>Si no estas registrado, hazlo aqui</h3>
+        <form action="html/registro.html" method="POST">
+            <button type="submit">Registrate</button>
+        </form>
 
     </body>
 </html>
