@@ -4,6 +4,22 @@ html {
   height: 100%;
 }
 
+button {
+  outline: none;
+  background: rgba(black, 0.8);
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 20px;
+  color: rgb(125, 46, 252);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: semibold;
+  line-height: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 body {
   background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
   color: gray;
@@ -39,7 +55,7 @@ body {
     label {
       display: block;
       margin: 0 0 10px;
-      color: gray;
+      color: rgb(0, 46, 252);
       font-size: 12px;
       font-weight: semibold;
       line-height: 1;
@@ -54,7 +70,7 @@ body {
       border: 0;
       border-radius: 4px;
       padding: 12px 20px;
-      color: white;
+      color: rgb(0, 46, 252);
       font-family: inherit;
       font-size: inherit;
       font-weight: semibold;
@@ -66,8 +82,6 @@ body {
 
   header {
     margin: 0 0 40px;
-
-    
   }
   h1 {
     padding: 4px 0;
