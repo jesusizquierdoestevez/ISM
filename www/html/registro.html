@@ -2,35 +2,38 @@
 
 <html>
     <head>
+        <noscript>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com/ 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        </noscript>
         <meta charset="utf-8">
-        
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <meta name="color-scheme" content="light dark">
         <link rel="stylesheet" href="../css/index.css">
         <title>Welcome</title>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha256.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
     </head>
     <body>
             <h1>Pagina de registro</h1>
-            <form action="menuNFC.html" method="POST">
+            <form action="menuNFC.html" method="POST" onsubmit="return checkInformation('mail', 'direccion', 'name') && checkPassword('password')">
                 <h2>Introduce los datos necesarios</h2>
                 <br>
                 <label>Mail</label>                
-                <input type="text" placeholder="Mail" name="mail" required>
+                <input type="email" placeholder="Mail" id="mail" required>
                 <br>
                 <br>
                 <label>Direccion</label>                
-                <input type="text" placeholder="Direccion" name="direcion" required>
+                <input type="text" placeholder="Direccion" id="direccion" required>
                 <br>
                 <br>
                 <label>Nombre Completo</label>                
-                <input type="text" placeholder="Nombre Completo" name="mail" required>
+                <input type="text" placeholder="Nombre Completo" id="name" required>
                 <br>
                 <br>
                 <label>Password</label>
-                <input type="password" placeholder="password" name="password" required>
+                <input type="password" placeholder="password" id="password" required>
                 <br>
                 <br>
                 <br>
