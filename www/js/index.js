@@ -19,6 +19,9 @@
 
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
+
+
+
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
@@ -26,4 +29,76 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
+}
+
+function checkInformation()
+{
+    var email = document.getElementById('mail').value;
+    var direccion = document.getElementById('direccion').value;
+    var nombre = document.getElementById('name').value;
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if ( (email== "") || (direccion=="") || (nombre==""))
+    {
+        window.alert('Debe rellenar todos los campos del formulario');
+        return false;
+    }
+
+    if(!email.match(mailformat))
+    {
+        window.alert("El correo introducido no tiene el formato correcto");
+        return false;
+    }
+
+    return true;
+}
+
+function converToHash(message)
+{
+    const msgBuffer = new TextEncoder().encode(message);                    
+
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+    
+}
+
+function checkPassword()
+{
+    var password = document.getElementById('password').value;
+    var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    converToHash(password);
+
+    if (password.length < 8) 
+    {
+        window.alert("Debes escribir mas de 8 caracteres");
+        return false;
+    }
+
+     if(!regularExpression.test(password)) {
+        alert("La clave debe contener al menos un numero y un caracter especial");
+        return false;
+    }
+
+    return true;
+}
+
+function checkInfoLogin()
+{
+    var email = document.getElementById('mail').value;
+    var password = document.getElementById('password').value;
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if ((email == "") || (password==""))
+    {
+        window.alert("Debe rellenar ambos campos para acceder");
+        return false;
+    }
+
+    if(!email.match(mailformat))
+    {
+        window.alert("El correo introducido no tiene le formato correcto");
+        return false;
+    }
+
+    return true;
 }
