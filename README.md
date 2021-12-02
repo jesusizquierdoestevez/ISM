@@ -17,5 +17,5 @@ Para generar la APK, desde el directorio donde empieza el proyecto de Phonegap (
   plataforms/android/cordova/lib/check_reqs.js
    se sustituye la siguiente variable 
     const EXPECTED_JAVA_VERSION = '1.8.x'; 
-   por la que tengamos (por ejemplo EXPECTED_JAVA_VERSION = '13.0.x';)
+   por la que tengamos (por ejemplo EXPECTED_JAVA_VERSION = '13.0.x')
   
