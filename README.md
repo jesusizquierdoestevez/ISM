@@ -19,3 +19,4 @@
    * por la que tengamos (por ejemplo EXPECTED_JAVA_VERSION = '13.0.x')
  * Plugins instalados
    * http://phonegap-plugins.com/plugins/chariotsolutions/phonegap-nfc 
+   * http://phonegap-plugins.com/plugins/randdusing/bluetoothle 
