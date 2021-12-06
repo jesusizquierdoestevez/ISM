@@ -1,4 +1,3 @@
-
 html {
   width: 100%;
   height: 100%;
@@ -7,20 +6,31 @@ html {
 button {
   outline: none;
   background: rgb(213, 221, 255);
-  width: 100%;
+  width: 50%;
+  max-width: 360px;
   border: 0;
+  align-self: center;
   padding: 12px 20px;
   color: rgb(0, 0, 0);
+  text-align: center;
+  align-content: stretch;
   font-family: inherit;
   font-size: inherit;
-  font-weight: semibold;
+  font-weight: bold;
   line-height: inherit;
   text-transform: uppercase;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 body {
-  background: rgb(0, 0, 0);
+  background: rgb(30 215 96);
+  background-image: url("../img/spotify steer.png");
+  background-position: center;
+  align-self: center;
+  background-size: contain;
+  margin: 50px;
+  background-repeat: no-repeat;
   color: rgb(255, 255, 255);
   font-family: base-font-family;
   font-size: base-font-size;
@@ -39,39 +49,51 @@ body {
   height: 100%;
 }
 
-.form {
+form {
   z-index: 15;
   position: relative;
-  background: white;
-  width: max-width;
+  align-content: center;
   border-radius: 4px;
   box-shadow: 0 0 30px rgba(black, .1);
   box-sizing: border-box;
+  align-content: center;
   margin: 100px auto 10px;
   overflow: hidden;
-  }
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
 
-    label {
-      display: block;
-      margin: 0 0 10px;
-      color: white;
-      font-size: 12px;
-      font-weight: semibold;
-      line-height: 1;
-      text-transform: uppercase;
-      letter-spacing: .2em;
-    }
+label {
+  display: block;
+  margin: 0 0 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: semibold;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  align-self: center;
+}
 
+header {
+  margin: 0 0 40px;
+}
 
-  header {
-    margin: 0 0 40px;
-  }
-  h1 {
-    padding: 4px 0;
-    color: accent;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+h1 {
+  padding: 4px 0;
+  color: accent;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
+h3 {
+  text-align: center;
+  margin-top: 50px;
+}
 
+input{
+  font-size: 28px;
+  padding: 10px;
+}
