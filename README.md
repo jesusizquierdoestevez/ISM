@@ -17,4 +17,5 @@
    * se sustituye la siguiente variable 
     * const EXPECTED_JAVA_VERSION = '1.8.x'; 
    * por la que tengamos (por ejemplo EXPECTED_JAVA_VERSION = '13.0.x')
-  
+ * Plugins instalados
+   * http://phonegap-plugins.com/plugins/chariotsolutions/phonegap-nfc 
