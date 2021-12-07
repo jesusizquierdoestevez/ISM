@@ -21,3 +21,4 @@
    * http://phonegap-plugins.com/plugins/chariotsolutions/phonegap-nfc 
    * http://phonegap-plugins.com/plugins/randdusing/bluetoothle 
    * https://github.com/mapsplugin/cordova-plugin-googlemaps
+   * http://phonegap-plugins.com/plugins/rohfosho/cordovacallnumberplugin
