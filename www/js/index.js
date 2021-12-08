@@ -1,35 +1,83 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-
-// Wait for the deviceready event before using any of Cordova's device APIs.
-// See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
-
-
-
 document.addEventListener('deviceready', onDeviceReady, false);
-
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 }
+
+
+
+//------------------------------------
+function encenderBlueTooth()
+{
+    bluetoothle.enable(enableSuccess=>console.log("OK"), enableError=>alert("Bluettoth already enabled"));
+}
+//https://github.com/randdusing/cordova-plugin-bluetoothle#enable
+
+//OJO
+//conectar o simplemente encender y que se conecte predefinido¿?¿?¿?¿?¿?¿?¿?¿?¿
+function buscarConectarBlueTooth()
+{
+    //busca, para de buscar y conecta
+    bluetoothle.startScan(startScanSuccess, startScanError, params);
+    bluetoothle.stopScan(stopScanSuccess, stopScanError);
+    bluetoothle.bond(bondSuccess, bondError, params);
+
+}
+
+
+//------------------------------------
+function llamarNumero(num)//funcion para llamara a un numero determinado
+{
+    //OJO importante que tenga el +34 vergas
+    //revisar onload y tal 
+    var numComp="tel:"+ num;
+    <a href={numComp}></a>
+    
+}
+
+//------------------------------------
+/*
+Para este plugin he tenido que añadir al config.xml dos lineas (no se si en los demas sera necesario)
+Function nfc.write writes an NdefMessage to a NFC tag.
+On Android this method must be called from within an NDEF Event Handler.
+ */
+function escribirTag(tagId)//funcion para escribir en un tagNFC
+{
+    var escribir=[ndef.textRecord(tagId)];
+    nfc.write(escribir, success =>alert("Success"), error =>alert("Error"));
+}
+
+function leerTag()//funcion para leer en un tagNFC
+//https://stackoverflow.com/questions/36006013/nfc-reader-apache-cordova
+{ //entiendo que esto solo muestra la info, adaptar para que con la info la mande al server
+    app.receivedEvent('deviceready');
+
+    // Read NDEF formatted NFC Tags
+    nfc.addNdefListener (
+        function (nfcEvent) {
+            var tag = nfcEvent.tag,
+                ndefMessage = tag.ndefMessage;
+
+            // dump the raw json of the message
+            // note: real code will need to decode
+            // the payload from each record
+            alert(JSON.stringify(ndefMessage));
+
+            // assuming the first record in the message has
+            // a payload that can be converted to a string.
+            alert(nfc.bytesToString(ndefMessage[0].payload).substring(3));
+        },
+        function () { // success callback
+            alert("Waiting for NDEF tag");
+        },
+        function (error) { // error callback
+            alert("Error adding NDEF listener " + JSON.stringify(error));
+        }
+    );
+}
+//------------------------------------
 
 function checkInformation()
 {
@@ -66,7 +114,7 @@ function checkPassword()
 {
     var password = document.getElementById('password').value;
     var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-    converToHash(password);
+    //converToHash(password);
 
     if (password.length < 8) 
     {
