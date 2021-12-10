@@ -24,5 +24,5 @@
    * http://phonegap-plugins.com/plugins/rohfosho/cordovacallnumberplugin
    * https://awesomeopensource.com/project/Festify/cordova-spotify?categoryPage=29
   
-  *Se puede revisar si estan instalados si aparecen dedntro de la carpeta de plugins en el proyecto de phonegap*
+  *Se puede revisar si estan instalados si aparecen dentro de la carpeta de plugins en el proyecto de phonegap*
   
