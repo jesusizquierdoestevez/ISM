@@ -26,6 +26,12 @@ function buscarConectarBlueTooth()
 
 }
 
+//------------------------------------
+function 
+{
+    
+
+}
 
 //------------------------------------
 function llamarNumero(num)//funcion para llamara a un numero determinado
