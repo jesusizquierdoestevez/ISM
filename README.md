@@ -23,6 +23,7 @@
    * https://github.com/mapsplugin/cordova-plugin-googlemaps
    * http://phonegap-plugins.com/plugins/rohfosho/cordovacallnumberplugin
    * https://awesomeopensource.com/project/Festify/cordova-spotify?categoryPage=29
+   * https://github.com/nchutchind/cordova-plugin-streaming-media
   
   *Se puede revisar si estan instalados si aparecen dentro de la carpeta de plugins en el proyecto de phonegap*
   
