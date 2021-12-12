@@ -1,3 +1,8 @@
+const bluetoothle = require("../../platforms/android/app/src/main/assets/www/plugins/com.randdusing.bluetoothle/www/bluetoothle");
+const bluetooth = require("../../platforms/android/platform_www/plugins/com.phonegap.plugins.bluetooth/www/bluetooth");
+const bluetoothSerial = require("../../platforms/android/platform_www/plugins/cordova-plugin-bluetooth-serial/www/bluetoothSerial");
+const BluetoothLePlugin = require("../../plugins/com.randdusing.bluetoothle/src/windows/BluetoothLePlugin");
+
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
@@ -11,9 +16,26 @@ function onDeviceReady() {
 //------------------------------------
 function encenderBlueTooth()
 {
-    bluetoothle.enable(enableSuccess=>console.log("OK"), enableError=>alert("Bluettoth already enabled"));
+    //https://github.com/don/BluetoothSerial#enable
+    //entra a la funcion 
+    
+    bluetoothSerial.isEnabled(
+        function() {
+            alert("Bluetooth is already enabled");
+        },
+        function() {
+            bluetoothSerial.enable(
+                function() {
+                    alert("Bluetooth is enabled");
+                },
+                function() {
+                    alert("The user did *not* enable Bluetooth");
+                }
+            );
+        }
+    );
 }
-//https://github.com/randdusing/cordova-plugin-bluetoothle#enable
+//ANTIGUO https://github.com/randdusing/cordova-plugin-bluetoothle#enable
 
 //OJO
 //conectar o simplemente encender y que se conecte predefinido¿?¿?¿?¿?¿?¿?¿?¿?¿
@@ -27,20 +49,44 @@ function buscarConectarBlueTooth()
 }
 
 //------------------------------------
-function 
+//https://github.com/nchutchind/cordova-plugin-streaming-media
+function reproducirVideo()
 {
     
+    var url="https://youtu.be/GNWLILeztaI";
+    
+    alert("https://youtu.be/GNWLILeztaI");
+    const streaming= require("../../plugins/cordova-plugin-streaming-media/www/StreamingMedia");
+    streaming.playVideo(url);
+}
 
+function reproducirAudio()
+{
+    var url="https://youtu.be/GNWLILeztaI";
+    //var streaming= new StreamingMedia;
+    //streaming.playAudio(url);
 }
 
 //------------------------------------
-function llamarNumero(num)//funcion para llamara a un numero determinado
-{
-    //OJO importante que tenga el +34 vergas
-    //revisar onload y tal 
-    var numComp="tel:"+ num;
-    <a href={numComp}></a>
+function mapas()//string del tipo "38.897096,-77.036545"
+{//la funcion preguntara con que aplicacion quieres abrirla y ya solo habria que pulsar como llegar
+    //funciona
+    var direccion="38.897096,-77.036545"
+    var direccionComp="geo:"+direccion;
+    window.location.href = direccionComp; 
     
+}
+
+//------------------------------------
+function llamarNumero()//funcion para llamara a un numero determinado
+{   //funciona
+    //llama al numero pero hay que pulsar botoncito
+    //revisar onload y tal 
+
+    var num=document.getElementById("numero").value;
+    var numComp="tel:"+num;
+    window.location.href = numComp; 
+
 }
 
 //------------------------------------
@@ -49,8 +95,9 @@ Para este plugin he tenido que añadir al config.xml dos lineas (no se si en los
 Function nfc.write writes an NdefMessage to a NFC tag.
 On Android this method must be called from within an NDEF Event Handler.
  */
-function escribirTag(tagId)//funcion para escribir en un tagNFC
+function escribirTag()//funcion para escribir en un tagNFC
 {
+    var tagId="5";
     var escribir=[ndef.textRecord(tagId)];
     nfc.write(escribir, success =>alert("Success"), error =>alert("Error"));
 }
@@ -107,14 +154,7 @@ function checkInformation()
     return true;
 }
 
-function converToHash(message)
-{
-    const msgBuffer = new TextEncoder().encode(message);                    
 
-    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-
-    
-}
 
 function checkPassword()
 {
