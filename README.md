@@ -27,3 +27,6 @@
   
   *Se puede revisar si estan instalados si aparecen dentro de la carpeta de plugins en el proyecto de phonegap*
   
+  
+  https://www.filemail.com/d/jxarshtsddqvfkt Proyecto de seguridad
+  
