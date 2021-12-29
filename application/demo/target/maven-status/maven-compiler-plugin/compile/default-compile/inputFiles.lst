@@ -1,0 +1,14 @@
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/controller/System796.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/Seguridad/Cipher.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/controller/accesController.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/Seguridad/JWTAuthorizationFIlter.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/business/dto/Preferencia.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/application/Main.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/data/dao/PersonaDataMgr.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/data/dao/PreferenciaDataMgr.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/data/dao/ServicioDataMgr.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/business/dto/NFC.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/business/dto/Servicio.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/data/dao/NFCTagDataMgr.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/data/DBConnect.java
+/home/rafa/Escritorio/ism/application/demo/src/main/java/es/uco/ism/system796/business/dto/Usuario.java

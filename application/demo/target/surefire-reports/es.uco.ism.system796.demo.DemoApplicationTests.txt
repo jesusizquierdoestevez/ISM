@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: es.uco.ism.system796.demo.DemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.694 s - in es.uco.ism.system796.demo.DemoApplicationTests

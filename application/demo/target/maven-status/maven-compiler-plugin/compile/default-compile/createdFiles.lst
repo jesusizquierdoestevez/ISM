@@ -1,0 +1,15 @@
+es/uco/ism/system796/data/dao/ServicioDataMgr.class
+es/uco/ism/system796/business/dto/NFC.class
+es/uco/ism/system796/controller/System796.class
+es/uco/ism/system796/business/dto/Servicio.class
+es/uco/ism/system796/business/dto/Preferencia.class
+es/uco/ism/system796/application/Main.class
+es/uco/ism/system796/Seguridad/JWTAuthorizationFIlter.class
+es/uco/ism/system796/application/Main$WebSecurityConfig.class
+es/uco/ism/system796/controller/accesController.class
+es/uco/ism/system796/business/dto/Usuario.class
+es/uco/ism/system796/data/DBConnect.class
+es/uco/ism/system796/data/dao/NFCTagDataMgr.class
+es/uco/ism/system796/Seguridad/Cipher.class
+es/uco/ism/system796/data/dao/PersonaDataMgr.class
+es/uco/ism/system796/data/dao/PreferenciaDataMgr.class
